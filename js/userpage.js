@@ -123,7 +123,7 @@ submit.addEventListener('click',(e) => {
         console.log(err);
     })
 
-    window.location.href='http://meet.google.com/yia-mtfe-gmh';
+    window.location.href='https://demo-class-noizy.netlify.app/';
 })
 
 
