@@ -1,8 +1,117 @@
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+}
 *{
     margin: 0;
     padding: 0;
 }
 .animation{
     width: 100%;
-    height: 100vh;
+    height: 130vh;
+}
+.registration-form{
+	padding: 50px 0;
+    
+}
+
+.form{
+    
+  --border-width: 3px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  font-family: Lato, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+
+} 
+
+.registration-form form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 8.0px 16.0px 16.0px hsla(0, 0%, 99%, 0.696);
+    
+}
+.submit{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.registration-form .form-icon{
+	text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+.form-group input:focus{
+    outline:none;
+}
+.form-group.error input{
+    border-color: var(--error-color);
+    border-width: 3px;
+}
+.form-group.success input{
+    border-color: var(--success-color);
+    border-width: 3px;
+}
+.form-group small{
+    color: var(--error-color);
+}
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 9px 20px;
+    
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
 }
