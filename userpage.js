@@ -123,7 +123,7 @@ submit.addEventListener('click',(e) => {
         console.log(err);
     })
 
-    window.location.href="https://www.google.com/";
+    window.location.href="https://incomparable-concha-f71a26.netlify.app/";
 })
 
 
