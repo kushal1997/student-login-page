@@ -123,7 +123,7 @@ submit.addEventListener('click',(e) => {
         console.log(err);
     })
 
-    window.location.href='https://demo-class-noizy.netlify.app/';
+    window.location.href="https://www.google.com/";
 })
 
 
