@@ -1,3 +1,4 @@
+
 const user_name = document.querySelector('#name');
 
 const email_ID = document.querySelector('#email');
@@ -6,19 +7,6 @@ const form = document.querySelector('#sign_up');
 
 const submit = document.querySelector('#submit_btn')
 
-let firebaseConfig = {
-    apiKey: "AIzaSyDNw2GMD3y4LotsBpEn96Ll6sQW0JlTbKQ",
-    authDomain: "fir-video-data.firebaseapp.com",
-    projectId: "fir-video-data",
-    storageBucket: "fir-video-data.appspot.com",
-    messagingSenderId: "448013266772",
-    appId: "1:448013266772:web:d7d5c12314c4b63f9562c1"
-};
-
-firebase.initializeApp(firebaseConfig);
-let firestore= firebase.firestore();
-
-const db=firestore.collection("formData");
 
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
@@ -91,6 +79,7 @@ const checkMob = () => {
     return valid;
 
 }
+
 form.addEventListener('input', (e) => {
     switch (e.target.id) {
         case 'name':
@@ -105,25 +94,7 @@ form.addEventListener('input', (e) => {
     }
 })
 
-submit.addEventListener('click',(e) => {
-    e.preventDefault();
-    let name=document.getElementById('name').value;
-    let email=document.getElementById('email').value;
-    let ph=document.getElementById('phone-num').value;
-    let course=document.getElementById('exampleFormControlSelect1').value;
 
-    db.doc().set({
-        name: name,
-        email: email,
-        mob: ph,
-        course: course
-    }).then(()=>{
-        console.log("Data Saved");
-    }).catch(err => {
-        console.log(err);
-    })
 
-    window.location.href="https://incomparable-concha-f71a26.netlify.app/";
-})
 
 
