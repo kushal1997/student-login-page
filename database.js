@@ -21,7 +21,8 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
         email: document.getElementById('email').value,
         ph: document.getElementById('phone-num').value
     }).then(() => {
-        location.href = "https://google.com/";
+        // location.href = "https://google.com/";
+        location.href ="https://incomparable-concha-f71a26.netlify.app/";
 
     }).catch(err => {
         console.log(err);
