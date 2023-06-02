@@ -22,7 +22,7 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
         ph: document.getElementById('phone-num').value
     }).then(() => {
         // location.href = "https://google.com/";
-        location.href ="https://incomparable-concha-f71a26.netlify.app/";
+        location.href ="https://meet.google.com/djv-eswc-htx";
 
     }).catch(err => {
         console.log(err);
