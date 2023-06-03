@@ -21,9 +21,18 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
         email: document.getElementById('email').value,
         ph: document.getElementById('phone-num').value
     }).then(() => {
-        // location.href = "https://google.com/";
+        Swal.fire({
+            title: 'Please save or bookmark the upcoming page',
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+          }).then(()=>{
+            location.href ="https://meet.google.com/djv-eswc-htx";
+          })
         
-        location.href ="https://meet.google.com/djv-eswc-htx";
 
     }).catch(err => {
         console.log(err);
