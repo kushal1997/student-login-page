@@ -5,9 +5,11 @@ const email_ID = document.querySelector('#email');
 const phone_number = document.querySelector('#phone-num');
 const form = document.querySelector('#sign_up');
 
-const submit = document.querySelector('#submit_btn')
-
-
+const submitBtn = document.querySelector('#submit_btn')
+const disableButton=()=> submitBtn.disabled = true;
+const enableButton=()=> submitBtn.disabled = false;
+  
+disableButton();
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
@@ -25,6 +27,7 @@ const isEmailVAlid = email => {
 }
 
 const showError = (input, message) => {
+    submitBtn.sty
     const formSpace = input.parentElement;
     formSpace.classList.remove('success');
     formSpace.classList.add('error');
@@ -92,8 +95,23 @@ form.addEventListener('input', (e) => {
             checkMob();
             break;
     }
+    checkAllValid();
 })
+const checkAllValid = ()=>{
+    let nameValid=checkName();
+    let emailValid=checkEmail();
+    let numValid=checkMob();
 
+    let allValid=nameValid && emailValid && numValid;
+
+    if(!allValid){
+        disableButton();
+    }
+    else{
+        enableButton();
+    }
+    
+}
 
 
 
