@@ -21,6 +21,7 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
         email: document.getElementById('email').value,
         ph: document.getElementById('phone-num').value
     }).then(() => {
+      form.reset();
         Swal.fire({
             title: 'Please save or bookmark the upcoming page',
             showClass: {
