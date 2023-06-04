@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-
+const date=new Date().toLocaleTimeString();
 document.getElementById("submit_btn").addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -19,7 +19,8 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
     set(ref(db, 'users/' + Math.floor(Math.random() * 1000)), {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        ph: document.getElementById('phone-num').value
+        ph: document.getElementById('phone-num').value,
+        time: date
     }).then(() => {
       form.reset();
         Swal.fire({
@@ -31,7 +32,7 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
               popup: 'animate__animated animate__fadeOutUp'
             }
           }).then(()=>{
-            location.href ="https://meet.google.com/djv-eswc-htx";
+            location.href ="https://meet.google.com/zbc-wmrx-smr";
           })
         
 

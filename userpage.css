@@ -118,3 +118,29 @@
     color: white;
     margin-top: 20px;
 }
+
+
+
+/*MASTERCLASS STYLE*/
+.text-box{
+    
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background:url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    font-family: ui-serif;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+
+
