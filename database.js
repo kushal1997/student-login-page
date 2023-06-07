@@ -32,7 +32,7 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
               popup: 'animate__animated animate__fadeOutUp'
             }
           }).then(()=>{
-            location.href ="https://meet.google.com/zbc-wmrx-smr";
+            location.href ="https://teams.live.com/meet/9571274662711";
           })
         
 
