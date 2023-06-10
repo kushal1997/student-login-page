@@ -32,7 +32,7 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
               popup: 'animate__animated animate__fadeOutUp'
             }
           }).then(()=>{
-            location.href ="https://teams.live.com/meet/9571274662711";
+            location.href ="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzU3MGRmMWItYTNmYS00MDJhLWFiNzEtMzAxZTM2ZWFlNDg4%40thread.v2/0?context=%7b%22Tid%22%3a%22b538aa44-7e6e-46ff-aa9e-28dc1570c306%22%2c%22Oid%22%3a%22156406a7-3c0c-4687-8c1c-7460d39003f7%22%7d";
           })
         
 
