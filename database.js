@@ -11,7 +11,8 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-const date=new Date().toLocaleTimeString();
+const newTime=new Date().toLocaleTimeString();
+const newDate =new Date().toLocaleDateString();
 document.getElementById("submit_btn").addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -20,7 +21,8 @@ document.getElementById("submit_btn").addEventListener('click', (e) => {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         ph: document.getElementById('phone-num').value,
-        time: date
+        time: newTime,
+        date: newDate
     }).then(() => {
       form.reset();
         Swal.fire({
